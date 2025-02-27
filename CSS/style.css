@@ -1,0 +1,15 @@
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 100px;
+}
+nav ul li a{
+    color: rgb(43, 78, 40);
+    font-size: 30px;
+    text-decoration: none;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
