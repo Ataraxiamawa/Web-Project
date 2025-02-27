@@ -1,15 +1,62 @@
-nav ul{
+/***header***/
+header nav ul{
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 100px;
 }
-nav ul li a{
-    color: rgb(43, 78, 40);
+header nav ul li a{
+    color: #31502b; 
     font-size: 30px;
     text-decoration: none;
+    line-height: 100px; 
 }
 .logo{
     height: 100px;
     width: 100px;
+}
+
+
+/***content***/
+.petsimg{
+    display: flex;
+    width: 100%;
+}
+.wellcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wellcome h1{
+    display: flex;
+    text-align: center;
+    color: #ecbc52; 
+    font-size: 50px;
+}
+.dogimg{
+    width: 20%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Media/background.png);
+    gap: 100px;
+}
+.aboutext{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #ffffff; 
+    font-size: 30px;
+}
+.petsimg2{
+    width: 30%;
+    margin-left: 10%;
+    border: 10px solid #ffffff; 
+    border-radius: 10px;
 }
