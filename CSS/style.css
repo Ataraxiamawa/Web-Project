@@ -3,17 +3,31 @@ header nav ul{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 100px;
+    gap: 20vw;
 }
 header nav ul li a{
     color: #31502b; 
-    font-size: 30px;
+    font-size: 3vw;
     text-decoration: none;
-    line-height: 100px; 
+    line-height: 10vw; 
+    position: relative;
+}
+header nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 0.5vw;
+    background:#ecbc52; 
+    position: absolute;
+    left: 0;
+    bottom: -0.5vw;
+    transition: 0.5s;
+}
+header nav ul li a:hover::after{
+    width: 100%
 }
 .logo{
-    height: 100px;
-    width: 100px;
+    height: 10vw;
+    width: 10vw;
 }
 
 
@@ -26,12 +40,13 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fbfbfb;
 }
 .wellcome h1{
     display: flex;
     text-align: center;
     color: #ecbc52; 
-    font-size: 50px;
+    font-size: 5vw;
 }
 .dogimg{
     width: 20%;
@@ -42,7 +57,7 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
     background-image: url(/Media/background.png);
-    gap: 100px;
+    gap: 10vw;
 }
 .aboutext{
     display: flex;
@@ -52,11 +67,10 @@ header nav ul li a{
     margin-top: 2%;
     margin-bottom: 2%;
     color: #ffffff; 
-    font-size: 30px;
+    font-size: 2vw;
 }
 .petsimg2{
     width: 30%;
     margin-left: 10%;
-    border: 10px solid #ffffff; 
-    border-radius: 10px;
+    border-radius: 1vw;
 }
