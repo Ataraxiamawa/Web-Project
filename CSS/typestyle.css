@@ -1,0 +1,69 @@
+/***header***/
+header nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20vw;
+}
+header nav ul li a{
+    color: #31502b; 
+    font-size: 3vw;
+    text-decoration: none;
+    line-height: 10vw; 
+    position: relative;
+}
+header nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 0.5vw;
+    background:#ecbc52; 
+    position: absolute;
+    left: 0;
+    bottom: -0.5vw;
+    transition: 0.5s;
+}
+header nav ul li a:hover::after{
+    width: 100%
+}
+.logo{
+    height: 10vw;
+    width: 10vw;
+}
+/***content***/
+.petimg{
+    display: flex;
+    text-align: center;
+}
+.petimg img{
+    width: 100%;
+    height: 50vh;
+}
+h1{
+    text-align: center;
+    padding: 2vw;
+    color: #46a334;
+    font-size: 5vw;
+}
+.type{
+    background-color: #31502b;
+    color:  #fbfbfb;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vw;
+    gap: 5vw;
+}
+.animal {
+    width: 40%;
+    text-align: center;
+}
+.animal img {
+    width: 100%;
+    height: 70%;
+    border: 0.5vw solid #fbfbfb;
+    border-radius: 5%;
+}
+.animal h3 {
+    font-size: 3vw;
+}
