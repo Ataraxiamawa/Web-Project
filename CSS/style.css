@@ -32,6 +32,7 @@ header nav ul li a:hover::after{
 
 
 /***content***/
+/*welcome*/
 .petsimg{
     display: flex;
     width: 100%;
@@ -51,7 +52,7 @@ header nav ul li a:hover::after{
 .dogimg{
     width: 20%;
 }
-
+/*about*/
 .about{
     display: flex;
     justify-content: center;
@@ -73,4 +74,26 @@ header nav ul li a:hover::after{
     width: 30%;
     margin-left: 10%;
     border-radius: 1vw;
+}
+/*types*/
+.types{
+    color: #31502b; 
+    text-align: center;
+    font-size: 2vw;
+}
+.animals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+.animal {
+    width: 40%;
+    text-align: center;
+}
+.animal img {
+    width: 100%;
+}
+.animal h3 {
+    font-size: 3vw;
 }
