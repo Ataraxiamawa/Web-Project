@@ -30,6 +30,9 @@ header nav ul li a:hover::after{
     width: 10vw;
 }
 
+body {
+    direction: rtl;
+}
 
 /***content***/
 /*welcome*/
