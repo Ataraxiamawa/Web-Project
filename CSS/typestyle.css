@@ -3,7 +3,7 @@ header nav ul{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 20vw;
+    gap: 15vw;
 }
 header nav ul li a{
     color: #31502b; 
