@@ -30,6 +30,9 @@ header nav ul li a:hover::after{
     width: 10vw;
 }
 /***content***/
+.content{
+    background-color: #31502b;
+}
 .petimg{
     display: flex;
     text-align: center;
@@ -40,19 +43,18 @@ header nav ul li a:hover::after{
 }
 h1{
     text-align: center;
-    padding: 2vw;
-    color: #46a334;
+    color: #fbfbfb;
     font-size: 5vw;
+    background-color: #1a2b16;
 }
 .type{
-    background-color: #31502b;
     color:  #fbfbfb;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5vw;
-    gap: 5vw;
+    gap: 4vw;
 }
 .animal {
     width: 40%;
@@ -66,4 +68,11 @@ h1{
 }
 .animal h3 {
     font-size: 3vw;
+}
+/***footer***/
+footer{
+    background-color:#1a2b16;
+    color: #31502b;
+    text-align: center;
+    padding: 2vw;
 }

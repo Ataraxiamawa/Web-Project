@@ -97,3 +97,10 @@ header nav ul li a:hover::after{
 .animal h3 {
     font-size: 3vw;
 }
+/***footer***/
+footer{
+    background-color: #31502b;
+    color: #fbfbfb;
+    text-align: center;
+    padding: 2vw;
+}
