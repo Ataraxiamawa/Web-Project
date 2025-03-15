@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - حيواني اللطيف</title>
+    <link rel="stylesheet" href="/CSS/typestyle.css">
+    <script src="/JS/validation.js" defer></script>
+    <style>
+        .content {
+            max-width: 600px;
+            margin: auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .input-field, textarea, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .submit-btn {
+            background: #31502b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .submit-btn:hover {
+            background: #1a2b16;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about-us.html">من نحن</a></li>
+                <li><a href="contact-us.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="content">
+        <h2>اتصل بنا</h2>
+        <form id="contact-form">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" class="input-field" minlength="3" pattern="[\p{L}\s]{3,}" title="يجب أن يحتوي الاسم على 3 أحرف على الأقل ولا يشمل أرقامًا أو رموزًا" required>
+            
+            <label for="gender">الجنس:</label>
+            <select id="gender" name="gender" class="input-field" required>
+                <option value="">اختر</option>
+                <option value="male">ذكر</option>
+                <option value="female">أنثى</option>
+            </select>
+            
+            <label for="phone">رقم الجوال:</label>
+            <input type="tel" id="phone" name="phone" class="input-field" pattern="[0-9]{10}" required>
+            
+            <label for="dob">تاريخ الميلاد:</label>
+            <input type="date" id="dob" name="dob" class="input-field" required>
+            
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" class="input-field" required>
+            
+            <label for="language">لغة التواصل:</label>
+            <select id="language" name="language" class="input-field" required>
+                <option value="">اختر</option>
+                <option value="arabic">العربية</option>
+                <option value="english">الإنجليزية</option>
+                <option value="french">الفرنسية</option>
+            </select>
+            
+            <label for="pet-info">معلومات عن الحيوان الأليف:</label>
+            <textarea id="pet-info" name="pet-info" class="input-field" placeholder="اكتب هنا معلومات عن حيوانك الأليف المريض أو الذي يحتاج مساعدة" minlength="10" required></textarea>
+            
+            <label for="message">رسالتك:</label>
+            <textarea id="message" name="message" class="input-field" minlength="5" required></textarea>
+            
+            <button type="submit" class="submit-btn">إرسال</button>
+        </form>
+    </section>
+    
+    <footer>
+        <h2>كل الحقوق محفوظة لفريق حيواني اللطيف &copy; 2025</h2>
+    </footer>
+</body>
+</html>
