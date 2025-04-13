@@ -60,7 +60,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/Media/background.png);
+    background-image: url(../Media/background.png);
     gap: 10vw;
 }
 .aboutext{
