@@ -53,7 +53,7 @@ app.post('/submit-form', [
 
   db.query(sql, [name, gender, phone, dob, email, language, petInfo, message], (err, result) => {
     if (err) return res.status(500).json({ message: 'خطأ أثناء حفظ البيانات' });
-    res.redirect('/HTML/thank-you.html');
+    res.redirect('/HTML/thankYou.html');
   });
 });
 
