@@ -24,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'website')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'website', 'HTML', 'index.html'));
+});
+
 app.post('/submit-form', [
   check('name').trim().isLength({ min: 3 }),
   check('gender').isIn(['male', 'female']),
@@ -49,12 +53,8 @@ app.post('/submit-form', [
 
   db.query(sql, [name, gender, phone, dob, email, language, petInfo, message], (err, result) => {
     if (err) return res.status(500).json({ message: 'خطأ أثناء حفظ البيانات' });
-    res.status(200).json({ message: 'تم إرسال البيانات بنجاح' });
+    res.redirect('/HTML/thank-you.html');
   });
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'website', 'HTML', 'index.html'));
 });
 
 app.listen(PORT, () => {
