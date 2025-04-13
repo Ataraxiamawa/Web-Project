@@ -6,7 +6,7 @@ const { check, validationResult } = require('express-validator');
 const mysql = require('mysql2');
 
 const app = express();
-const PORT = 5000;
+const PORT = 2500;
 
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -53,6 +53,9 @@ app.post('/submit-form', [
 
   db.query(sql, [name, gender, phone, dob, email, language, petInfo, message], (err, result) => {
     if (err) return res.status(500).json({ message: 'خطأ أثناء حفظ البيانات' });
+
+    console.log("البيانات تم حفظها:", { name, gender, phone, dob, email, language, petInfo, message });
+
     res.redirect('/HTML/thankYou.html');
   });
 });
