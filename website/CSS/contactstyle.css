@@ -1,0 +1,82 @@
+/***header***/
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15vw;
+  }
+  
+  header nav ul li a {
+    color: #31502b;
+    font-size: 3vw;
+    text-decoration: none;
+    line-height: 10vw;
+    position: relative;
+  }
+  
+  header nav ul li a::after {
+    width: 0;
+    height: 0.5vw;
+    background: #ecbc52;
+    position: absolute;
+    left: 0;
+    bottom: -0.5vw;
+    transition: 0.5s;
+  }
+  
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .logo {
+    height: 10vw;
+    width: 10vw;
+  }
+  /***contact us***/
+.content {
+    max-width: 600px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.input-field, textarea, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.submit-btn {
+    background: #31502b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.submit-btn:hover {
+    background: #1a2b16;
+}
+/***footer***/
+footer{
+    background-color:#1a2b16;
+    color: #31502b;
+    text-align: center;
+    padding: 2vw;
+}
