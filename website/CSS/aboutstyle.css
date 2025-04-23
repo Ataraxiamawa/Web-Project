@@ -1,98 +1,112 @@
 /***header***/
 header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 15vw;
-  }
-  
-  header nav ul li a {
-    color: #31502b;
-    font-size: 3vw;
-    text-decoration: none;
-    line-height: 10vw;
-    position: relative;
-  }
-  
-  header nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 0.5vw;
-    background: #ecbc52;
-    position: absolute;
-    left: 0;
-    bottom: -0.5vw;
-    transition: 0.5s;
-  }
-  
-  header nav ul li a:hover::after {
-    width: 100%;
-  }
-  
-  .logo {
-    height: 10vw;
-    width: 10vw;
-  }
-  
-  /***content***/
-  .content {
-    background-color: #31502b;
-    color: #fbfbfb;
-    text-align: center;
-    padding: 2vw;
-    margin: 100px auto;
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .content h2 {
-    font-size: 3vw;
-    color: #ecbc52;
-    margin-bottom: 1vw;
-  }
-  
-  .content p {
-    font-size: 2vw;
-    margin-bottom: 2vw;
-  }
-  
-  .content a {
-    background-color: #ecbc52;
-    color: #1a2b16;
-    padding: 1vw 2vw;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 1.8vw;
-  }
-  
-  .content a:hover {
-    background-color: #e2ac32;
-  }
-  
-  table {
-    color: #31502b;
-    font-size: 2vw;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #1a2b16;
-    color: #fbfbfb;
-    padding: 3vw;
-  }
-  
-  td {
-    background-color: #fbfbfb;
-    color: #1a2b16;
-  }
-  
-  /***footer***/
-  footer {
-    color: #31502b;
-    text-align: center;
-    padding: 2vw;
-  }
-  
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 15vw;
+}
+
+header nav ul li a {
+  color: #31502b;
+  font-size: 3vw;
+  text-decoration: none;
+  line-height: 10vw;
+  position: relative;
+}
+
+header nav ul li a::after {
+  width: 0;
+  height: 0.5vw;
+  background: #ecbc52;
+  position: absolute;
+  left: 0;
+  bottom: -0.5vw;
+  transition: 0.5s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  height: 10vw;
+  width: 10vw;
+}
+
+/***content***/
+.content {
+  background-color: #31502b;
+  color: #fbfbfb;
+  text-align: center;
+  padding: 2vw;
+  margin: 100px auto;
+  max-width: 90vw;
+  border-radius: 20px;
+}
+
+.content h2 {
+  font-size: 3vw;
+  color: #ecbc52;
+  margin-bottom: 1vw;
+}
+
+.content p {
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+
+.content a {
+  background-color: #ecbc52;
+  color: #1a2b16;
+  padding: 1vw 2vw;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.8vw;
+}
+
+.content a:hover {
+  background-color: #e2ac32;
+}
+
+/***table fixes***/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2vw;
+}
+
+th, td {
+  padding: 1vw;
+  text-align: center;
+  font-size: 1.8vw;
+}
+
+th {
+  background-color: #1a2b16;
+  color: #fbfbfb;
+}
+
+td {
+  background-color: #fbfbfb;
+  color: #1a2b16;
+}
+
+td a {
+  background-color: #ecbc52;
+  color: #1a2b16;
+  padding: 0.5vw 1vw;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+td a:hover {
+  background-color: #e2ac32;
+}
+
+/***footer***/
+footer {
+  color: #31502b;
+  text-align: center;
+  padding: 2vw;
+}
