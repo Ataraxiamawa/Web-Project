@@ -4,6 +4,7 @@ header nav ul{
     justify-content: center;
     list-style: none;
     gap: 15vw;
+    flex-wrap: wrap;
 }
 header nav ul li a{
     color: #31502b; 
@@ -39,12 +40,15 @@ body {
 .petsimg{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 .wellcome{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fbfbfb;
+    padding: 5vw;
+    text-align: center;
 }
 .wellcome h1{
     display: flex;
@@ -57,25 +61,23 @@ body {
 }
 /*about*/
 .about{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     background-image: url(../Media/background.png);
-    gap: 10vw;
+    gap: 5vw;
+    padding: 5vw;
 }
 .aboutext{
     display: flex;
     flex-direction: column;
     text-align: right;
-    margin-right: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     color: #ffffff; 
     font-size: 2vw;
+    margin: 0;
 }
 .petsimg2{
-    width: 30%;
-    margin-left: 10%;
+    width: 100%;
     border-radius: 1vw;
 }
 /*types*/
@@ -106,4 +108,30 @@ footer{
     color: #fbfbfb;
     text-align: center;
     padding: 2vw;
+}
+/***media***/
+@media (max-width: 768px){
+    .logo{
+        height: 20vw;
+        width: 20vw;
+    }
+    header nav ul li a{
+        font-size: 5vw;
+        line-height: 12vw;
+    }
+    .wellcome h1{
+        font-size: 7vw;
+    }
+    .aboutext{
+        font-size: 3.5vw;
+    }
+    .animal{
+        width: 80%;
+    }
+    .animal h3{
+        font-size: 5vw;
+    }
+    .types{
+        font-size: 4vw;
+    }
 }

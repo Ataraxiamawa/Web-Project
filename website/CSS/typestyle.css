@@ -4,6 +4,7 @@ header nav ul{
     justify-content: center;
     list-style: none;
     gap: 15vw;
+    flex-wrap: wrap;
 }
 header nav ul li a{
     color: #31502b; 
@@ -31,10 +32,13 @@ header nav ul li a:hover::after{
 }
 /***content***/
 .content{
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: #31502b;
 }
 .petimg{
     display: flex;
+    justify-content: center;
     text-align: center;
 }
 .petimg img{
@@ -75,4 +79,24 @@ footer{
     color: #31502b;
     text-align: center;
     padding: 2vw;
+}
+/***media***/
+@media (max-width: 768px) {
+    .logo{
+        height: 20vw;
+        width: 20vw;
+    }
+    header nav ul li a{
+        font-size: 5vw;
+        line-height: 12vw;
+    }
+    h1{
+        font-size: 7vw;
+    }
+    .animal{
+        width: 80%;
+    }
+    .animal h3{
+        font-size: 5vw;
+    }
 }

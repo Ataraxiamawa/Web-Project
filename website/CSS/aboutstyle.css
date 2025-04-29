@@ -4,6 +4,7 @@ header nav ul {
   justify-content: center;
   list-style: none;
   gap: 15vw;
+  flex-wrap: wrap;
 }
 
 header nav ul li a {
@@ -35,6 +36,8 @@ header nav ul li a:hover::after {
 
 /***content***/
 .content {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: #31502b;
   color: #fbfbfb;
   text-align: center;
@@ -107,4 +110,34 @@ footer {
   color: #31502b;
   text-align: center;
   padding: 2vw;
+}
+
+/***media***/
+@media (max-width: 768px) {
+  .logo {
+    height: 20vw;
+    width: 20vw;
+  }
+  header nav ul li a {
+    font-size: 5vw;
+    line-height: 12vw;
+  }
+  .content h2 {
+    font-size: 6vw;
+  }
+  .content p {
+    font-size: 4vw;
+  }
+  .content a {
+    font-size: 4vw;
+    padding: 2vw 3vw;
+  }
+  th, td {
+    font-size: 3.5vw;
+    padding: 2vw;
+  }
+  td a {
+    font-size: 3.5vw;
+    padding: 2vw 3vw;
+  }
 }
