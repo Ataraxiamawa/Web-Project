@@ -60,6 +60,36 @@ app.post('/submit-form', [
   });
 });
 
+app.post('/submit-sick-animal', [
+  check('animalType').notEmpty(),
+  check('animalAge').isInt({ min: 0 }),
+  check('gender').isIn(['male', 'female']),
+  check('vaccinated').isIn(['yes', 'no']),
+  check('symptoms').isLength({ min: 5 }),
+  check('symptomStartDate').isISO8601().toDate()
+], (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  const { animalType, animalAge, gender, vaccinated, symptoms, symptomStartDate, notes } = req.body;
+
+  const sql = `
+    INSERT INTO sick_animals 
+    (animal_type, animal_age, gender, vaccinated, symptoms, symptom_start_date, notes)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `;
+
+  db.query(sql, [animalType, animalAge, gender, vaccinated, symptoms, symptomStartDate, notes || null], (err, result) => {
+    if (err) return res.status(500).json({ message: 'خطأ أثناء حفظ البيانات' });
+
+    console.log("تم حفظ بيانات الحيوان:", { animalType, animalAge, gender, vaccinated, symptoms, symptomStartDate, notes });
+    res.redirect('/HTML/thankYou.html');
+  });
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
