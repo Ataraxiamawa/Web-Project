@@ -3,7 +3,7 @@ header nav ul{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 15vw;
+    gap: 5vw;
     flex-wrap: wrap;
 }
 header nav ul li a{
